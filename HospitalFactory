@@ -1,0 +1,79 @@
+I am using jyupter for creating a pychart
+
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+a = pd.read_csv(r"C:\Users\Nmngoyal\Desktop\Hospital\dataset_hospital.csv")
+print(a)
+
+output : 
+   Hospital ID Hospital Name           Zone       State   District
+0    Hospital1             A   Northen Zone   Rajasthan     Jaipur
+1    Hospital2             B   Eastern Zone       Assam     Dispur
+2    Hospital3             C  Southern Zone    Telegana        Hyd
+3    Hospital4             D   Western Zone         Goa  North Goa
+4    Hospital5             E   Northen Zone   Rajasthan   Bhilwara
+5    Hospital6             F   Northen Zone      Punjab   Bhatinda
+6    Hospital7             G   Northen Zone      Punjab   Bhatinda
+7    Hospital8             H   Northen Zone   Rajasthan     Jaipur
+8    Hospital9             I   Eastern Zone     Manipur     Imphal
+9   Hospital10             J   Eastern Zone     Manipur     Ukhrul
+10  Hospital11             K   Eastern Zone     Manipur     Ukhrul
+11  Hospital12             L   Eastern Zone    Nagaland     Kohima
+12  Hospital13             M   Eastern Zone    Nagaland     Kohima
+13  Hospital14             N  Southern Zone      Kerala     kollam
+14  Hospital15             O  Southern Zone   Karnataka  Bangalore
+15  Hospital16             P   Western Zone         Goa  North Goa
+16  Hospital17             Q   Western Zone         Goa  North Goa
+17  Hospital18             R   Western Zone         Goa  South Goa
+18  Hospital19             S   Western Zone     Gujarat  Ahemdabad
+19  Hospital20             T   Western Zone     Gujarat  Ahemdabad
+20  Hospital21             U   Western Zone     Gujarat      Surat
+21  Hospital22             V   Western Zone     Gujarat      Surat
+22  Hospital23             W   Western Zone  Maharastra     Mumbai
+23  Hospital24             X   Western Zone  Maharastra     Mumbai
+24  Hospital25             Y   Western Zone  Maharastra     Nagpur
+25  Hospital26             Z   Western Zone  Maharastra     Nagpur
+
+>>>>>>>a.head(5)
+	Hospital ID	Hospital Name	Zone	State	District
+0	Hospital1	A	Northen Zone	Rajasthan	Jaipur
+1	Hospital2	B	Eastern Zone	Assam	Dispur
+2	Hospital3	C	Southern Zone	Telegana	Hyd
+3	Hospital4	D	Western Zone	Goa	North Goa
+4	Hospital5	E	Northen Zone	Rajasthan	Bhilwara
+
+>>>>>>a['Hospital ID']
+0      Hospital1
+1      Hospital2
+2      Hospital3
+3      Hospital4
+4      Hospital5
+5      Hospital6
+6      Hospital7
+7      Hospital8
+8      Hospital9
+9     Hospital10
+10    Hospital11
+11    Hospital12
+12    Hospital13
+13    Hospital14
+14    Hospital15
+15    Hospital16
+16    Hospital17
+17    Hospital18
+18    Hospital19
+19    Hospital20
+20    Hospital21
+21    Hospital22
+22    Hospital23
+23    Hospital24
+24    Hospital25
+25    Hospital26
+Name: Hospital ID, dtype: object
+
+>>>>>left = a.loc[a['Zone']== 'Western Zone'].count()[0]
+>>>>print(left)
+
+Output : 12
+
